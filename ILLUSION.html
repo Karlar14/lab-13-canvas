@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="350" height="300" style="border:10px solid #000000;">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+
+
+			// i needed a loop to repeat the x axis 4 times
+		 for (i = 0; i <= 6; i++){ //initalize, terminal condition, incerementation
+			 			// another loop to repeat the y axis 7 times
+						for (j = 0; j <= 4; j++){ //initalize, terminal condition, incerementation
+			       	context.fillStyle = "#000000" //black!!
+
+							// context.fillRect(x, y, width, height);
+					 		context.fillRect((i * 45 + 20), (j * 55 + 20), 35, 35 );
+
+}
+
+}
+}
+	</script>
+
+</body>
+</html>

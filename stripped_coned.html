@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="2000" height="2000">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+						//a loop for both the x and y axis to move as a diagonal line
+						for (j = 0; j <= 26; j++){ //initalize, terminal condition, incerement
+							if(j % 2 ==0 ){
+								context.fillStyle = "#FF0000" //red!
+								context.beginPath();
+								context.arc((j * 20),(j * 20), (j*10), 0, 2 * Math.PI, true); 		// context.arc(x, y, radius, start angle, end angle, clockwise);
+
+								context.closePath();
+								context.fill();
+
+							}
+							else{
+								context.fillStyle = "#0000FF" //blue!
+								context.beginPath();
+								context.arc((j * 20),(j * 20), (j*10), 0, 2 * Math.PI, true); 		// context.arc(x, y, radius, start angle, end angle, clockwise);
+
+								context.closePath();
+								context.fill();
+
+							}
+
+
+}
+}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title></title>
+	</head>
+	<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+
+
+			// i needed a loop to repeat the x axis 7 times
+			for (i = 0; i < 8; i++){ //initalize, terminal condition, incerementation
+			 			// another loop to repeat the y axis 5 times
+						for (j = 0; j < 8; j++){ //initalize, terminal condition, incerementation
+							if (j % 2 == 0) { // all EVEN numbers (modulo = 2; that means all even numbers are divisible by 2)
+									 if (i % 2 == 0) {
+										 context.fillStyle = "#000000" //black!!
+									 }
+									 else {
+										 context.fillStyle = "#FFFFFF" //white!!
+									 }
+								 }
+							else {	// for all ODD numbers (all ELSE) make circles
+									 if (i % 2 == 0) {
+										  context.fillStyle = "#FFFFFF" //white!!
+									 }
+									 else {
+										 context.fillStyle = "#000000" //black!!
+									 }
+								 }
+								 // context.fillRect(x, y, width, height);
+									context.fillRect((i * 35), (j * 35), 35, 35);
+								 	console.log(i, j);
+							
+							 }
+					}
+	}
+
+
+
+	</script>
+
+	</body>
+	</html>
+
+
+
+
+
+								<!-- // context.fillStyle = "#FFFFFF" //black!!
+						//
+	// 							// // context.fillRect(x, y, width, height);
+	// 							// context.fillRect((i * 45 + 20), (j * 55 + 20), 35, 35 );
+	// -->
